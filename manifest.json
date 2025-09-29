@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Elementor AI Content Assistant",
     "description": "Generate, shorten, and replace text & images inline in Elementor (or any editable field) using OpenAI.",
-    "version": "1.0",
+    "version": "4.1",
     "icons": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
