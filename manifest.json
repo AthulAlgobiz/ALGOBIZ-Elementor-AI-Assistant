@@ -1,0 +1,44 @@
+{
+    "manifest_version": 3,
+    "name": "Elementor AI Content Assistant",
+    "description": "Generate, shorten, and replace text & images inline in Elementor (or any editable field) using OpenAI.",
+    "version": "1.0",
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "permissions": [
+      "storage",
+      "contextMenus",
+      "scripting",
+      "activeTab"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_title": "Elementor AI Content Assistant"
+    },
+    "options_page": "options/options.html",
+
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"],
+        "css": ["injector.css"],
+        "run_at": "document_idle"
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["icons/*"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
